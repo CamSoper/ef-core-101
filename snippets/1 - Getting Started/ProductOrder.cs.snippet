@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ContosoPets ProductOrder class</Title>
+            <Shortcut>po</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public class ProductOrder
+                {
+                    public int Id { get; set; }
+                    public int Quantity { get; set; }
+                    public int ProductId { get; set; }
+                    public int OrderId { get; set; }
+
+                    public Order Order { get; set; }
+                    public Product Product { get; set; }
+                }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

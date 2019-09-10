@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ContosoPets Customer class</Title>
+            <Shortcut>customer</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public partial class Customer
+                {
+                    public Customer()
+                    {
+                        Orders = new HashSet<Order>();
+                    }
+
+                    public int Id { get; set; }
+                    [Required]
+                    public string FirstName { get; set; }
+                    [Required]
+                    public string LastName { get; set; }
+                    public string StreetAddress { get; set; }
+                    public string City { get; set; }
+                    public string StateOrProvinceAbbr { get; set; }
+                    public string Country { get; set; }
+                    public string PostalCode { get; set; }
+                    public string Phone { get; set; }
+                    public string Email { get; set; }
+
+                    public ICollection<Order> Orders { get; set; }
+                }
+                ]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>System.Collections.Generic</Namespace>
+                </Import>
+                <Import>
+                    <Namespace>System.ComponentModel.DataAnnotations</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
