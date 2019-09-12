@@ -2,12 +2,12 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
     <CodeSnippet Format="1.0.0">
         <Header>
-            <Title>ContosoPets - .FromSqlRaw() example</Title>
-            <Shortcut>sqlraw</Shortcut>
+            <Title>ContosoPets - .FromSqlInterpolated() example</Title>
+            <Shortcut>fromsql</Shortcut>
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA["SELECT * FROM dbo.Products WHERE Price > 7"]]>
+                <![CDATA["SELECT * FROM dbo.Products WHERE Price > {minPrice}"]]>
             </Code>
         </Snippet>
     </CodeSnippet>

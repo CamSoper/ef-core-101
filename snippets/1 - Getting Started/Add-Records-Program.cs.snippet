@@ -12,7 +12,7 @@
                 Product squeakyBone = new Product()
                 {
                     Name = "Squeaky Dog Bone",
-                    Price = 5.99M
+                    Price = 4.99M
                 };
                 context.Products.Add(squeakyBone);
 
@@ -21,7 +21,7 @@
                     Name = "Tennis Ball 3-Pack",
                     Price = 9.99M
                 };
-                context.Products.Add(tennisBalls);
+                context.Add(tennisBalls);
 
                 context.SaveChanges();
                 ]]>
