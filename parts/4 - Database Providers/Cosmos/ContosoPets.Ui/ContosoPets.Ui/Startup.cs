@@ -23,7 +23,7 @@ namespace ContosoPets.Ui
             services.AddRazorPages();
             services.AddDbContext<ContosoPetsContext>(options =>
                 options.UseCosmos("https://ef-core-101.documents.azure.com:443/",
-                    "K6UJtTSoXxG01ySzzUIbFs5B0Kl2wqw7MC6bIHV2zT89FPTmCMuMUs9m4a2yHDXf95MvSrVFgyMJSpqwnfrq4w==",
+                    "",
                     "ContosoPets"));
         }
 
