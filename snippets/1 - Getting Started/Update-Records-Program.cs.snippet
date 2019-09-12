@@ -7,9 +7,14 @@
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA[squeakyBone.Price = 7.99M;
+                <![CDATA[var squeakyBone = context.Products
+                                    .Where(p => p.Name == "Squeaky Dog Bone")
+                                    .FirstOrDefault();
+                if (squeakyBone is Product)
+                {
+                    squeakyBone.Price = 7.99m;
+                }
                 context.SaveChanges();
-
                 ]]>
             </Code>
         </Snippet>

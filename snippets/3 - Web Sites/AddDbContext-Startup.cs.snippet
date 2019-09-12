@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ContosoPets - add DbContext to Startup.cs</Title>
+            <Shortcut>adddbcontext</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[services.AddDbContext<ContosoPetsContext>(options =>
+                    options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ContosoPets;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>
+                        Microsoft.EntityFrameworkCore
+                    </Namespace>
+                </Import>
+                <Import>
+                    <Namespace>
+                        ContosoPets.Ui.Data
+                    </Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

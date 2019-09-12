@@ -3,33 +3,23 @@
     <CodeSnippet Format="1.0.0">
         <Header>
             <Title>ContosoPets - display existing products</Title>
-            <Shortcut>displayproduct</Shortcut>
+            <Shortcut>displayproducts</Shortcut>
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA[Product squeakyBone = context.Products
-                                        .Where(p => p.Name == "Squeaky Dog Bone")
-                                        .FirstOrDefault();
+                <![CDATA[var products = context.Products
+                    .Where(p => p.Price >= 5.00m)
+                    .OrderBy(p => p.Name);
 
-                Console.WriteLine($$"Id:    {squeakyBone.Id}");
-                Console.WriteLine($$"Name:  {squeakyBone.Name}");
-                Console.WriteLine($$"Price: {squeakyBone.Price}");
+                foreach (Product p in products)
+                {
+                    Console.WriteLine($$"Id:    {p.Id}");
+                    Console.WriteLine($$"Name:  {p.Name}");
+                    Console.WriteLine($$"Price: {p.Price}");
+                    Console.WriteLine(new string('-', 20));
+                }
                 ]]>
             </Code>
-            <Imports>
-                <Import>
-                    <Namespace>System</Namespace>
-                </Import>
-                <Import>
-                    <Namespace>System.Linq</Namespace>
-                </Import>
-                <Import>
-                    <Namespace>ContosoPets.Data</Namespace>
-                </Import>
-                <Import>
-                    <Namespace>ContosoPets.Models</Namespace>
-                </Import>
-            </Imports>
         </Snippet>
     </CodeSnippet>
 </CodeSnippets>

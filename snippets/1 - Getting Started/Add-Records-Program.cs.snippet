@@ -7,24 +7,23 @@
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA[using (ContosoPetsContext context = new ContosoPetsContext())
-                    {
-                        Product squeakyBone = new Product()
-                        {
-                            Name = "Squeaky Dog Bone",
-                            Price = 5.99M
-                        };
+                <![CDATA[using ContosoPetsContext context = new ContosoPetsContext();
+            
+                Product squeakyBone = new Product()
+                {
+                    Name = "Squeaky Dog Bone",
+                    Price = 5.99M
+                };
+                context.Products.Add(squeakyBone);
 
-                        Product tennisBalls = new Product()
-                        {
-                            Name = "Tennis Ball 3-Pack",
-                            Price = 9.99M
-                        };
+                Product tennisBalls = new Product()
+                {
+                    Name = "Tennis Ball 3-Pack",
+                    Price = 9.99M
+                };
+                context.Products.Add(tennisBalls);
 
-                        context.Products.Add(squeakyBone);
-                        context.Products.Add(tennisBalls);
-                        context.SaveChanges();
-                    }
+                context.SaveChanges();
                 ]]>
             </Code>
             <Imports>
