@@ -9,11 +9,6 @@
             <Code Language="CSharp">
                 <![CDATA[public class Order
                 {
-                    public Order()
-                    {
-                        ProductOrders = new HashSet<ProductOrder>();
-                    }
-
                     public int Id { get; set; }
                     public DateTime OrderPlaced { get; set; }
                     public DateTime? OrderFulfilled { get; set; }
