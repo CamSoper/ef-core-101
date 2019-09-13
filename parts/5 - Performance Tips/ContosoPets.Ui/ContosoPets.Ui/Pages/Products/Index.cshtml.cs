@@ -20,7 +20,8 @@ namespace ContosoPets.Ui.Pages.Products
 
         public async Task OnGetAsync()
         {
-            Product = await _context.Products.ToListAsync();
+            Product = await _context.Products
+                .ToListAsync();
         }
     }
 }

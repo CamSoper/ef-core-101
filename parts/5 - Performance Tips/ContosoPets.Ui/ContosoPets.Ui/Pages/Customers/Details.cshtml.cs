@@ -14,12 +14,6 @@ namespace ContosoPets.Ui.Pages.Customers
     {
         private readonly ContosoPets.Ui.Data.ContosoPetsContext _context;
 
-        private static Func<ContosoPetsContext, int?, Task<Customer>> _customerById =
-            EF.CompileAsyncQuery((ContosoPetsContext db, int? id) =>
-                db.Customers
-                    .Include(c => c.Orders)
-                    .Single(c => c.Id == id));
-
         public DetailsModel(ContosoPets.Ui.Data.ContosoPetsContext context)
         {
             _context = context;
@@ -34,7 +28,9 @@ namespace ContosoPets.Ui.Pages.Customers
                 return NotFound();
             }
 
-            Customer = await _customerById(_context, id);
+            Customer = await _context.Customers
+                    .Include(c => c.Orders)
+                    .SingleAsync(c => c.Id == id);
 
             if (Customer == null)
             {
