@@ -29,7 +29,7 @@ namespace ContosoPets.Ui
         {
             services.AddRazorPages();
             services.AddDbContext<ContosoPetsContext>(options =>
-                options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ContosoPets;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+                options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ContosoPets;Integrated Security=True;ConnectRetryCount=0"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

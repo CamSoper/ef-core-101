@@ -8,7 +8,7 @@
         <Snippet>
             <Code Language="CSharp">
                 <![CDATA[services.AddDbContext<ContosoPetsContext>(options =>
-                    options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ContosoPets;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));]]>
+                    options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ContosoPets;Integrated Security=True;ConnectRetryCount=0"));]]>
             </Code>
             <Imports>
                 <Import>
